@@ -215,6 +215,7 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 }
 .site-footer.on-dark { border-top-color: var(--cream-18); color: var(--cream); }
 .site-footer .footer-brand { display: flex; align-items: center; gap: 24px; flex-wrap: wrap; }
+.site-footer .footer-brand .logo-mark { display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
 .site-footer .footer-note { font-size: 11px; letter-spacing: .16em; font-weight: 300; color: var(--ink-55); }
 .site-footer.on-dark .footer-note { color: var(--cream-55); }
 .site-footer .footer-nav { display: flex; gap: 26px; flex-wrap: wrap; font-size: 10px; letter-spacing: .24em; text-transform: uppercase; font-weight: 300; }
