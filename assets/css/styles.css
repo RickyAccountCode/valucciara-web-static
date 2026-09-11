@@ -324,6 +324,11 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 .process-copy { display: flex; flex-direction: column; gap: 22px; }
 .process-copy h2 { font-size: 32px; line-height: 1.2; letter-spacing: -.01em; }
 .process-copy p { font-size: 15px; line-height: 1.8; font-weight: 200; color: var(--cream-85); max-width: 460px; text-wrap: pretty; }
+.why-list { display: flex; flex-direction: column; margin-top: 6px; }
+.why-row { padding: 16px 0; border-bottom: 1px solid var(--cream-18); }
+.why-row:first-child { padding-top: 0; }
+.why-row dt { font-size: 11px; letter-spacing: .18em; text-transform: uppercase; color: var(--gold); font-weight: 300; margin-bottom: 6px; }
+.why-row dd { font-size: 14px; line-height: 1.7; font-weight: 200; color: var(--cream-85); max-width: 460px; }
 .process-stats { display: flex; gap: 40px; flex-wrap: wrap; padding-top: 4px; }
 .process-stats .num { font-size: 30px; font-weight: 200; color: var(--gold); }
 .process-stats .label { font-size: 10px; letter-spacing: .2em; text-transform: uppercase; color: var(--cream-55); margin-top: 4px; }
