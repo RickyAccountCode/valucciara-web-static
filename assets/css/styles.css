@@ -224,38 +224,39 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 }
 
 /* ---------- hero (Home) ----------
-   El alto de la sección lo define la imagen misma: no hay aspect-ratio
-   fijo ni object-fit:cover, así que la foto nunca se recorta — se
-   muestra completa a lo ancho, a la altura que le corresponda según su
-   propia proporción. El texto se superpone abajo sobre un degradado.
-   Si .hero-banner-media está vacío (sin <img> todavía), min-height
-   mantiene un placeholder visible. */
+   Todas las capas (foto, degradado, texto) se apilan en la misma celda
+   de grid: el alto de la sección es el máximo entre "lo que mide la
+   foto a lo ancho completo" y "lo que necesita el bloque de texto".
+   Así la foto nunca se recorta Y el texto nunca se corta, sin importar
+   cuánto texto haya o qué proporción tenga la imagen. Si no hay <img>
+   todavía, min-height deja un placeholder visible. */
 .hero-banner {
   position: relative;
+  display: grid;
   width: 100%;
   min-height: 320px;
-  overflow: hidden;
   background: var(--beige);
 }
-.hero-banner-media { line-height: 0; }
+.hero-banner-media,
+.hero-banner-overlay,
+.hero-banner-content {
+  grid-area: 1 / 1;
+}
+.hero-banner-media { line-height: 0; align-self: start; }
 .hero-banner-media img { width: 100%; height: auto; display: block; }
 .hero-banner-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(8,10,12,0) 45%, rgba(8,10,12,.8) 100%);
+  background: linear-gradient(180deg, rgba(8,10,12,.05) 0%, rgba(8,10,12,.4) 40%, rgba(8,10,12,.88) 100%);
   pointer-events: none;
 }
 .hero-banner-content {
-  position: absolute;
-  left: 0;
-  right: 0;
-  bottom: 0;
   z-index: 2;
   color: var(--cream);
   max-width: 620px;
+  width: 100%;
   padding: 48px var(--gutter) 56px;
   display: flex;
   flex-direction: column;
+  justify-content: flex-end;
   gap: 22px;
 }
 .hero-banner-content h1 { font-size: 42px; line-height: 1.16; letter-spacing: -.01em; text-wrap: pretty; }
