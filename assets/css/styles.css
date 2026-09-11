@@ -224,29 +224,32 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 }
 
 /* ---------- hero (Home) ----------
-   Banner de ancho completo, proporción ~5:2 (la de la foto de referencia).
-   .hero-banner-media queda vacío hasta que se agregue la foto real: solo
-   hay que poner un <img> adentro (ver comentario en el HTML), cover +
-   inset:0 ya están preparados. */
+   El alto de la sección lo define la imagen misma: no hay aspect-ratio
+   fijo ni object-fit:cover, así que la foto nunca se recorta — se
+   muestra completa a lo ancho, a la altura que le corresponda según su
+   propia proporción. El texto se superpone abajo sobre un degradado.
+   Si .hero-banner-media está vacío (sin <img> todavía), min-height
+   mantiene un placeholder visible. */
 .hero-banner {
   position: relative;
   width: 100%;
-  aspect-ratio: 5 / 2;
+  min-height: 320px;
   overflow: hidden;
   background: var(--beige);
-  display: flex;
-  align-items: flex-end;
 }
-.hero-banner-media { position: absolute; inset: 0; }
-.hero-banner-media img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.hero-banner-media { line-height: 0; }
+.hero-banner-media img { width: 100%; height: auto; display: block; }
 .hero-banner-overlay {
   position: absolute;
   inset: 0;
-  background: linear-gradient(180deg, rgba(8,10,12,0) 35%, rgba(8,10,12,.78) 100%);
+  background: linear-gradient(180deg, rgba(8,10,12,0) 45%, rgba(8,10,12,.8) 100%);
   pointer-events: none;
 }
 .hero-banner-content {
-  position: relative;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
   z-index: 2;
   color: var(--cream);
   max-width: 620px;
@@ -260,8 +263,8 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 .hero-actions { display: flex; gap: 16px; align-items: center; flex-wrap: wrap; padding-top: 4px; }
 
 @media (max-width: 860px) {
-  .hero-banner { aspect-ratio: auto; min-height: 520px; align-items: flex-end; }
-  .hero-banner-content { padding: 36px 24px 40px; max-width: none; }
+  .hero-banner { min-height: 260px; }
+  .hero-banner-content { padding: 28px 24px 32px; max-width: none; }
   .hero-banner-content h1 { font-size: 32px; }
 }
 
