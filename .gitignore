@@ -1,0 +1,7 @@
+# Backups locales / temporales — nunca deben subirse al repo
+*.backup.html
+*backup*.html
+*.bak
+*~
+.DS_Store
+Thumbs.db
