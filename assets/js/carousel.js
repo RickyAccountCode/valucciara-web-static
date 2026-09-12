@@ -120,5 +120,34 @@
         setState(carousel, currentIndex(track) + dir);
       });
     });
+
+    // ---------- swipe táctil ----------
+    var viewport = carousel.querySelector('.cat-viewport');
+    if (viewport) {
+      var startX = 0, startY = 0, touching = false, dragging = false;
+      viewport.addEventListener('touchstart', function (e) {
+        if (e.touches.length !== 1) return;
+        startX = e.touches[0].clientX;
+        startY = e.touches[0].clientY;
+        touching = true;
+        dragging = false;
+      }, { passive: true });
+      viewport.addEventListener('touchmove', function (e) {
+        if (!touching) return;
+        var dx = e.touches[0].clientX - startX;
+        var dy = e.touches[0].clientY - startY;
+        if (!dragging && Math.abs(dx) > Math.abs(dy) && Math.abs(dx) > 10) dragging = true;
+        if (dragging) e.preventDefault();
+      }, { passive: false });
+      viewport.addEventListener('touchend', function (e) {
+        if (!touching) return;
+        touching = false;
+        if (!dragging) return;
+        var dx = e.changedTouches[0].clientX - startX;
+        var threshold = 40;
+        if (dx <= -threshold) setState(carousel, currentIndex(track) + 1);
+        else if (dx >= threshold) setState(carousel, currentIndex(track) - 1);
+      });
+    }
   });
 })();
