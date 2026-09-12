@@ -10,7 +10,16 @@
     return { file: file, name: name || '', price: price || '' };
   }
   var CATALOG_PHOTOS = {
-    hombre: ['30', '31', '32', '33', '34', '35', '36', '37'].map(function (n) { return photo(n + '.jpg'); }),
+    hombre: [
+      photo('30.jpg', 'Abrigo JADEN'),
+      photo('31.jpg', 'Abrigo ARTHUR'),
+      photo('32.jpg', 'Abrigo SALVATORE'),
+      photo('33.jpg', 'Abrigo MASSIMO'),
+      photo('34.jpg', 'Abrigo VINCENT'),
+      photo('35.jpg', 'Abrigo ENZO'),
+      photo('36.jpg', 'Abrigo LAURENT'),
+      photo('37.jpg')
+    ],
     mujer: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29'].map(function (n) { return photo(n + '.jpg'); })
   };
 
