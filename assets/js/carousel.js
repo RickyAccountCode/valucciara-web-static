@@ -20,7 +20,37 @@
       photo('36.jpg', 'Abrigo ENZO'),
       photo('37.jpg', 'Abrigo LAURENT')
     ],
-    mujer: ['1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '11', '12', '13', '14', '15', '16', '17', '18', '19', '20', '21', '22', '23', '24', '25', '26', '27', '28', '29'].map(function (n) { return photo(n + '.jpg'); })
+    mujer: [
+      photo('1.jpg', 'Abrigo VIVIANNE'),
+      photo('2.jpg', 'Abrigo MAEVA'),
+      photo('3.jpg', 'Abrigo APRIL'),
+      photo('4.jpg', 'Abrigo LUNA'),
+      photo('5.jpg', 'Abrigo BIANCA'),
+      photo('6.jpg', 'Abrigo ELEONORA'),
+      photo('7.jpg', 'Abrigo ASANI'),
+      photo('8.jpg', 'Abrigo ALESSIA'),
+      photo('9.jpg', 'Abrigo ARIADNE'),
+      photo('10.jpg', 'Abrigo ANTONELLA'),
+      photo('11.jpg', 'Abrigo JULIET'),
+      photo('12.jpg', 'Abrigo SERENA'),
+      photo('13.jpg', 'Abrigo KATE'),
+      photo('14.jpg', 'Abrigo ARYA'),
+      photo('15.jpg', 'Abrigo ROSALIE'),
+      photo('16.jpg', 'Abrigo SCARLET'),
+      photo('17.jpg', 'Abrigo FLORENCE'),
+      photo('18.jpg', 'Abrigo GEMMA'),
+      photo('19.jpg', 'Abrigo ANALISSE'),
+      photo('20.jpg', 'Abrigo TYLA'),
+      photo('21.jpg', 'Abrigo CIRCE'),
+      photo('22.jpg', 'Abrigo KENDALL'),
+      photo('23.jpg', 'Capa CATALINA'),
+      photo('24.jpg', 'Capa KLOE'),
+      photo('25.jpg', 'Capa CAMILLE'),
+      photo('26.jpg', 'Capa ELOISE'),
+      photo('27.jpg', 'Capa CALIPSO'),
+      photo('28.jpg', 'Capa MIRANDA'),
+      photo('29.jpg', 'Capa FRANCESCA')
+    ]
   };
 
   function buildPhotoBox(item) {
