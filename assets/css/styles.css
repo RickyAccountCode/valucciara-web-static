@@ -264,7 +264,7 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 @media (max-width: 860px) {
   .hero-banner { min-height: 260px; }
   .hero-banner-content { padding: 28px 24px 32px; max-width: none; }
-  .hero-banner-content h1 { font-size: 32px; }
+  .hero-banner-content h1 { font-size: 32px; margin-top: 44px; }
 }
 
 /* ---------- generic section paddings ---------- */
