@@ -368,6 +368,7 @@ h1, h2, h3 { font-weight: 200; line-height: 1.15; }
 }
 .cat-price { font-size: 14px; color: var(--ink-55); text-transform: uppercase; white-space: nowrap; }
 @media (max-width: 700px) {
+  .cat-page { flex-wrap: wrap; row-gap: 28px; }
   .cat-item { flex-basis: calc(50% - 10px); }
 }
 
