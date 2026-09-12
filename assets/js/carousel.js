@@ -11,14 +11,14 @@
   }
   var CATALOG_PHOTOS = {
     hombre: [
-      photo('30.jpg', 'Abrigo JADEN'),
-      photo('31.jpg', 'Abrigo BASTIAN'),
-      photo('32.jpg', 'Abrigo ARTHUR'),
-      photo('33.jpg', 'Abrigo SALVATORE'),
-      photo('34.jpg', 'Abrigo MASSIMO'),
-      photo('35.jpg', 'Abrigo VINCENT'),
-      photo('36.jpg', 'Abrigo ENZO'),
-      photo('37.jpg', 'Abrigo LAURENT')
+      photo('30.jpg', 'Abrigo JADEN', '$3,599.00'),
+      photo('31.jpg', 'Abrigo BASTIAN', '$3,799.00'),
+      photo('32.jpg', 'Abrigo ARTHUR', '$4,799.00'),
+      photo('33.jpg', 'Abrigo SALVATORE', '$4,599.00'),
+      photo('34.jpg', 'Abrigo MASSIMO', '$4,999.00'),
+      photo('35.jpg', 'Abrigo VINCENT', '$4,799.00'),
+      photo('36.jpg', 'Abrigo ENZO', '$4,199.00'),
+      photo('37.jpg', 'Abrigo LAURENT', '$4,599.00')
     ],
     mujer: [
       photo('1.jpg', 'Abrigo VIVIANNE', '$3,999.00'),
